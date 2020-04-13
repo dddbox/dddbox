@@ -1,0 +1,89 @@
+icon_color: "#c95624"
+# background_color: "#FFFFFF" #"#303030"
+background_color: "#3e3e3e" #"#303030"
+# primary_font_color: "#333333"
+primary_font_color: "#F3F3F3"
+button_backgroud_color: "#e3633a"
+button_backgroud_secondary_color: "#f14668"
+button_backgroud_tertiary_color: "#ffb229"
+icon_fill_color: "#F3F3F3" 
+
+# goto - go to a screen :: target: screen
+# execute_gcode - execute gcode :: gcode: str
+# pause_resume - pause or resume print :: None
+
+screens:
+  movement:
+    layout: 
+      type: movement
+  filament:
+    layout: 
+      type: not_implemented
+  temperature:
+    layout: 
+      type: not_implemented
+  bed_leveling:
+    layout: 
+      type: not_implemented
+  status:
+    layout: 
+      type: not_implemented
+  babystep:
+    layout: 
+      type: not_implemented
+  pause_resume:
+    layout: 
+      type: not_implemented
+  settings:
+    layout: 
+      type: not_implemented
+  home_page:
+    layout: 
+      type: grid
+      buttons:
+        - icon: movement
+          text: "Movement"
+          action: 
+            type: goto
+            kwargs:
+              target: movement
+        - icon: filament
+          text: "Filament"
+          action: 
+            type: goto
+            kwargs:
+              target: filament
+        - icon: temperature
+          text: "Heating"
+          action: 
+            type: goto
+            kwargs:
+              target: temperature
+        - icon: bed_leveling
+          text: "Bed Leveling"
+          action: 
+            type: goto
+            kwargs:
+              target: bed_leveling
+        - icon: status
+          text: "Status"
+          action: 
+            type: goto
+            kwargs:
+              target: status
+        - icon: babystep
+          text: "Babystep"
+          action: 
+            type: goto
+            kwargs:
+              target: babystep
+        - icon: play
+          text: "Start"
+          action: 
+            type: pause_resume
+        - icon: settings
+          text: "Settings"
+          action: 
+            type: goto
+            kwargs:
+              target: settings

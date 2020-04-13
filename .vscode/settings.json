@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/pkucmus/.cache/pypoetry/virtualenvs/duetpi-KO7G4fUB-py3.7/bin/python",
+    "python.formatting.provider": "black",
+    "restructuredtext.confPath": "",
+    "restructuredtext.linter.disabled": true
+}
