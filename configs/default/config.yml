@@ -1,0 +1,100 @@
+
+
+# goto - go to a screen :: target: screen
+# execute_gcode - execute gcode :: gcode: str
+# pause_resume - pause or resume print :: None
+
+name: "Default"
+
+colors:
+  icon: "#f3f3f3"
+  background: "#3e3e3e"
+  background_acent: "#343434"
+  primary_font: "#F3F3F3"
+  button_background: "#e3633a"
+  button_background_secondary: "#f14668"
+  button_background_tertiary: "#ffb229"
+  icon_fill: "#F3F3F3" 
+
+frames:
+  movement:
+    layout: 
+      type: movement
+  # filament:
+  #   layout: 
+  #     type: not_implemented
+  # temperature:
+  #   layout: 
+  #     type: not_implemented
+  # bed_leveling:
+  #   layout: 
+  #     type: not_implemented
+  # status:
+  #   layout: 
+  #     type: not_implemented
+  # babystep:
+  #   layout: 
+  #     type: not_implemented
+  # pause_resume:
+  #   layout: 
+  #     type: not_implemented
+  # settings:
+  #   layout: 
+  #     type: not_implemented
+  home_page:
+    layout: 
+      type: grid
+      columns: 4
+      rows: 2
+      buttons:
+        - icon: movement
+          text: "Movement"
+          action: 
+            type: goto
+            kwargs:
+              target: movement
+        - icon: filament
+          text: "Filament"
+          action: 
+            type: goto
+            kwargs:
+              target: filament
+        - icon: temperature
+          text: "Heating"
+          action: 
+            type: goto
+            kwargs:
+              target: temperature
+        - icon: bed_leveling
+          text: "Bed Leveling"
+          action: 
+            type: goto
+            kwargs:
+              target: bed_leveling
+        - icon: status
+          text: "Status"
+          action: 
+            type: goto
+            kwargs:
+              target: status
+        - icon: babystep
+          text: "Babystep"
+          action: 
+            type: goto
+            kwargs:
+              target: babystep
+        - icon: play  # not considered - get rid
+          text: "Start"
+          action: 
+            type: pause_resume
+            kwargs:
+              resume_icon: play
+              resume_text: "Resume"
+              pause_icon: pause
+              pause_text: "Pause"
+        - icon: settings
+          text: "Settings"
+          action: 
+            type: goto
+            kwargs:
+              target: settings
